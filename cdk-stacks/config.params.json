@@ -1,0 +1,36 @@
+{
+    "CdkAppName": "EnterpriseMobileChatAssistant",
+    "CdkBackendStack": "EnterpriseMobileChatAssistant",
+    "hierarchy": "/EnterpriseMobileChatAssistant/",
+    "parameters": [
+        {
+            "name": "originationNumberId",
+            "cliFormat": "origination-number-id",
+            "description": "The ID of the Origination Phone number you want to use.  Can be found in the End User Messaging SMS console.",
+            "required": true
+        },
+        {
+            "name": "viteIssuerUrl",
+            "cliFormat": "vite-issuer-url",
+            "description": "Issuer URL deployed from TVM (Token Vending Machine) solution.  Can be found in the Cloudformation stack output as 'IssuerUrlOutput'.",
+            "required": true
+        },
+        {
+            "name": "viteIAMAssumeRoleARN",
+            "cliFormat": "vite-iam-assume-role-arn",
+            "description": "IAM assume role ARN deployed from TVM (Token Vending Machine) solution.  Can be found in the Cloudformation stack output as 'QBizAssumeRoleARN'.",
+            "required": true
+        },
+        {
+            "name": "qBusinessApplicationId",
+            "cliFormat": "q-business-application-id",
+            "description": "Application ID of Amazon Q Business application.  Can be found in the Q Business console.",
+            "required": true
+        }
+        
+    ],
+    "tags": {
+        "project": "Enterprise Mobile Chat Assistant",
+        "os-code-source": "https://github.com/aws-samples/enterprise-mobile-chat-assistant"
+    }
+}
