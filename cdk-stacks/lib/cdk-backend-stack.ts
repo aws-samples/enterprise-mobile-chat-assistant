@@ -110,7 +110,7 @@ export class CdkBackendStack extends Stack {
     });
 
     //Custom Log Group so we can add Metric Filters
-    const logGroup = new logs.LogGroup(this, 'TwoWaySMSAmazonQBusinessDemoChatProcessor',{
+    const logGroup = new logs.LogGroup(this, 'EnterpriseMobileChatAssistantChatProcessor',{
       retention: logs.RetentionDays.THREE_MONTHS
     });
 
@@ -164,7 +164,7 @@ export class CdkBackendStack extends Stack {
       ]
     }));
 
-    NagSuppressions.addResourceSuppressionsByPath(this, '/TwoWaySMSAmazonQBusinessDemo/chatProcessorPolicy/Resource', [
+    NagSuppressions.addResourceSuppressionsByPath(this, '/EnterpriseMobileChatAssistant/chatProcessorPolicy/Resource', [
       {
         id: 'AwsSolutions-IAM5',
         reason: 'The function needs to call DynamoDB items, which requires a wildcard resource under DynamoDB table resource.'
